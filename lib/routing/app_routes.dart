@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mvvm_provider/features/home/home_screen.dart';
+import 'package:flutter_mvvm_provider/features/splash/splash_screen.dart';
 import 'package:flutter_mvvm_provider/routing/app_route_name.dart';
 import 'package:flutter_mvvm_provider/utils/app_global_variables.dart';
 import 'package:flutter_mvvm_provider/utils/default_screen.dart';
@@ -12,11 +14,20 @@ class AppRoutes {
     initialLocation: AppRouteName.splash,
     navigatorKey: navigatorKey,
     routes: <RouteBase>[
+
       // Splash
       GoRoute(
         path: AppRouteName.splash,
         builder: (BuildContext context, GoRouterState state) {
-          return Container();
+          return SplashScreen();
+        },
+      ),
+
+      // Home
+      GoRoute(
+        path: AppRouteName.home,
+        builder: (BuildContext context, GoRouterState state) {
+          return HomeScreen();
         },
       ),
 
