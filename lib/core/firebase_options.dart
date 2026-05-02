@@ -2,8 +2,10 @@
 // ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart' show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class DefaultFirebaseOptions {
+
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       throw UnsupportedError(
@@ -13,7 +15,6 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
@@ -38,20 +39,25 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB33Du5FMWYRNbc8KSUasm2xuzBnt9In40',
-    appId: '1:505721379717:android:7cc49127018365eee742ec',
-    messagingSenderId: '',
-    projectId: 'flutter-mvvm-provider-f4b7f',
-    storageBucket: 'flutter-mvvm-provider-f4b7f.firebasestorage.app',
-  );
+  static FirebaseOptions get android {
+    return FirebaseOptions(
+      apiKey: dotenv.env["API_KEY"] ?? "",
+      appId: dotenv.env["APP_ID"] ?? "",
+      messagingSenderId: dotenv.env["MESSAGING_SENDER_ID"] ?? "",
+      projectId: dotenv.env["PROJECT_ID"] ?? "",
+      storageBucket: dotenv.env["STORAGE_BUCKET"] ?? "",
+    );
+  }
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '',
-    projectId: '',
-    storageBucket: '',
-    iosBundleId: '',
-  );
+  static FirebaseOptions get ios {
+    return FirebaseOptions(
+      apiKey: dotenv.env["API_KEY"] ?? "",
+      appId: dotenv.env["APP_ID"] ?? "",
+      messagingSenderId: dotenv.env["MESSAGING_SENDER_ID"] ?? "",
+      projectId: dotenv.env["PROJECT_ID"] ?? "",
+      storageBucket: dotenv.env["STORAGE_BUCKET"] ?? "",
+      iosBundleId: dotenv.env["IOS_BUNDLE_ID"] ?? "",
+    );
+  }
+
 }
