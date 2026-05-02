@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505721379717",
+    "project_id": "flutter-mvvm-provider-f4b7f",
+    "storage_bucket": "flutter-mvvm-provider-f4b7f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505721379717:android:7cc49127018365eee742ec",
+        "android_client_info": {
+          "package_name": "com.app.flutter_mvvm_provider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB33Du5FMWYRNbc8KSUasm2xuzBnt9In40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -39,11 +39,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: '',
-    appId: '',
+    apiKey: 'AIzaSyB33Du5FMWYRNbc8KSUasm2xuzBnt9In40',
+    appId: '1:505721379717:android:7cc49127018365eee742ec',
     messagingSenderId: '',
-    projectId: '',
-    storageBucket: '',
+    projectId: 'flutter-mvvm-provider-f4b7f',
+    storageBucket: 'flutter-mvvm-provider-f4b7f.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
