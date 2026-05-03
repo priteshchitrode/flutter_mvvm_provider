@@ -1,4 +1,4 @@
-package com.example.flutter_mvvm_provider
+package com.app.flutter_mvvm_provider
 
 import io.flutter.embedding.android.FlutterActivity
 

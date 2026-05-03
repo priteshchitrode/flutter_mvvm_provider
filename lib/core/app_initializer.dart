@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_mvvm_provider/dependency_injection/locator.dart';
+import 'package:flutter_mvvm_provider/utils/app_global_variables.dart';
 
 
 ///  App Initialization Function
@@ -25,6 +26,7 @@ Future<void> initializeApp() async {
 
   // Load Environment Variables
   await dotenv.load(fileName: kDebugMode ? "./assets/env/.env.dev" : "./assets/env/.env.dev");
+  await dotenv.load(fileName: isAndroid ? "./assets/env/.env.firebase_options_android" : "./assets/env/.env.firebase_options_ios");
 
   // Dependency Injection
   initLocator();
