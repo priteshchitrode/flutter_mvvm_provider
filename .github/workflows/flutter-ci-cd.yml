@@ -25,7 +25,6 @@ name: Flutter CI CD
 on:
   push:
     branches:
-      - ci-cd-git-pipeline
       - deploy/dev-env
       - deploy/prod-env
 
